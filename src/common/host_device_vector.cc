@@ -179,7 +179,7 @@ template class HostDeviceVector<uint64_t>;  // bst_row_t
 template class HostDeviceVector<uint32_t>;  // bst_feature_t
 template class HostDeviceVector<RegTree::Segment>;
 
-#if defined(__APPLE__)
+#if defined(__APPLE__) || defined(__EMSCRIPTEN__)
 /*
  * On OSX:
  *
@@ -188,7 +188,7 @@ template class HostDeviceVector<RegTree::Segment>;
  * typedef unsigned long       __darwin_size_t;
  */
 template class HostDeviceVector<std::size_t>;
-#endif  // defined(__APPLE__)
+#endif  // defined(__APPLE__) || defined(__EMSCRIPTEN__)
 
 }  // namespace xgboost
 

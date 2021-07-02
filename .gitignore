@@ -48,6 +48,8 @@ Debug
 *.Rproj
 ./xgboost.mpi
 ./xgboost.mock
+xgboost.js
+xgboost.wasm
 #.Rbuildignore
 R-package.Rproj
 *.cache*
